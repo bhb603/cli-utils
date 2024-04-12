@@ -24,11 +24,7 @@ const jsonToTSVStream = new WritableStream({
       const obj = JSON.parse(chunk);
       const tsv: string[] = [];
       Object.values(obj).forEach((value) => {
-        if (typeof value === "object") {
-          tsv.push(JSON.stringify(value));
-        } else if (typeof value === "string") {
-          tsv.push(value);
-        }
+        tsv.push(JSON.stringify(value));
       });
       console.log(tsv.join("\t"));
     } catch (error) {
