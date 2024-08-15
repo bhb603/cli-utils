@@ -49,5 +49,11 @@ if (vars.length === 0) {
 }
 
 vars.forEach(([key, value]) => {
-  console.log(`${key}=${JSON.stringify(value)}`);
+  try {
+    // support JSON encoded values
+    const parsed = JSON.parse(value);
+    console.log(`${key}='${JSON.stringify(parsed)}'`);
+  } catch (_) {
+    console.log(`${key}=${JSON.stringify(value)}`);
+  }
 });
