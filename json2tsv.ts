@@ -1,6 +1,7 @@
 #!/usr/bin/env -S deno run --allow-read
 
-import { parseArgs, TextLineStream } from "./deps.ts";
+import { parseArgs } from "@std/cli";
+import { TextLineStream } from "@std/streams";
 
 const USAGE = `Convert JSON to TSV format.
 Input can be either a file or stdin

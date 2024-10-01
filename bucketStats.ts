@@ -3,9 +3,9 @@
 import {
   ListObjectsCommand,
   ListObjectsCommandOutput,
-  parseArgs,
   S3Client,
-} from "./deps.ts";
+} from "npm:@aws-sdk/client-s3";
+import { parseArgs } from "@std/cli";
 
 import { Bin, Stats } from "./Stats.ts";
 

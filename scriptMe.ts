@@ -1,6 +1,6 @@
 #!/usr/bin/env -S deno run --allow-write
 
-import { parseArgs } from "./deps.ts";
+import { parseArgs } from "@std/cli";
 
 const USAGE = `Generate basic scaffolding for Deno or TypeScript scripts.
 

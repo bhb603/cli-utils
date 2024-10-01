@@ -3,8 +3,8 @@
 import {
   GetFunctionConfigurationCommand,
   LambdaClient,
-  parseArgs,
-} from "./deps.ts";
+} from "@aws-sdk/client-lambda";
+import { parseArgs } from "@std/cli";
 
 const USAGE =
   `Get environment variables for a Lambda function and output them in dotenv format.
