@@ -42,6 +42,6 @@ for await (const line of lineStream) {
     });
     console.log(tsv.join("\t"));
   } catch (error) {
-    console.error(error.message);
+    console.error(error);
   }
 }
